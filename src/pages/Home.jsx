@@ -584,21 +584,21 @@ const Services = () => {
       num: "01",
       icon: <Phone size={28} />,
       title: "Telesales",
-      desc: "Outbound verkoopgesprekken door ervaren agents die jouw product of dienst doorgronden en deals sluiten.",
+      desc: "Help klanten de juiste keuze te maken en bouw mee aan sterke verkoopresultaten. Met de juiste begeleiding leer je overtuigend communiceren en verkoopgesprekken voeren.",
       tag: "OUTBOUND"
     },
     {
       num: "02",
       icon: <Headphones size={28} />,
       title: "Klantenservice",
-      desc: "Inbound klantenondersteuning: vragen beantwoorden, klachten oplossen, en klanten behouden — in jouw naam.",
+      desc: "Sta klanten vriendelijk te woord, beantwoord vragen en help hen met passende oplossingen. Jij bent het aanspreekpunt dat het verschil maakt.",
       tag: "INBOUND"
     },
     {
       num: "03",
       icon: <Target size={28} />,
       title: "Leadgeneratie",
-      desc: "Gekwalificeerde leads aanleveren via gerichte belt campagnes. Wij filteren, jij sluit. Zo simpel is het.",
+      desc: "Ga op zoek naar nieuwe opportuniteiten door potentiële klanten te contacteren en kwalitatieve afspraken of leads te verzamelen. Dankzij jouw inzet leg je de basis voor succesvolle samenwerkingen.",
       tag: "B2B / B2C"
     }];
 
@@ -689,10 +689,13 @@ const About = () => {
 
             <Reveal delay={0.1}>
               <p className="text-base mb-6 leading-relaxed" style={{ color: "#F5F0E8", opacity: 0.8 }}>
-                Call2Day is opgericht vanuit een simpele overtuiging: elk telefoontje verdient een échte stem. Geen robotstemmen, geen overvolle callcenters, geen gehaaste gesprekken.
+                Call2Day is opgericht vanuit een simpele overtuiging: goed werk begint bij goede mensen. Daarom bouwen we aan een team waarin je jezelf kunt ontwikkelen, gewaardeerd wordt en met plezier aan de slag gaat.
+              </p>
+              <p className="text-base mb-6 leading-relaxed" style={{ color: "#F5F0E8", opacity: 0.8 }}>
+                Bij Call2Day werk je samen met een ervaren, Nederlandstalig team dat kwaliteit en persoonlijk contact centraal stelt. Je krijgt een grondige onboarding, duidelijke begeleiding en de ondersteuning van een vaste contactpersoon. We zorgen ervoor dat je met vertrouwen aan de slag kunt en bieden een werkomgeving waarin jouw inzet écht het verschil maakt.
               </p>
               <p className="text-base mb-8 leading-relaxed" style={{ color: "#F5F0E8", opacity: 0.8 }}>
-                Ons team van ervaren Nederlandstalige agents werkt volledig in jouw naam. We denken mee met je merk, spreken je taal en vertegenwoordigen jou alsof we zelf bij je bedrijf in dienst zijn. Snelle onboarding, transparante rapportages, en altijd een vaste contactpersoon.
+                Of je nu al ervaring hebt of een nieuwe stap in je carrière wilt zetten, bij Call2Day krijg je de kans om te groeien, nieuwe vaardigheden te ontwikkelen en deel uit te maken van een hecht team dat elke dag samen het beste resultaat neerzet.
               </p>
             </Reveal>
 
@@ -770,21 +773,21 @@ const Clients = () => {
 const Testimonials = () => {
   const testimonials = [
     {
-      quote: "Call2Day heeft onze klantenservice volledig getransformeerd. De agents zijn professioneel, snel en spreken perfect Nederlands. Onze klanttevredenheid is met 30% gestegen.",
-      name: "Marieke de Vries",
-      company: "NovaTel B.V.",
+      quote: "Bij Call2Day kreeg ik meteen duidelijke begeleiding en goede training. Ik wist precies wat er van mij verwacht werd en voelde me vanaf dag één onderdeel van het team.",
+      name: "Yassine El Amrani",
+      company: "Sales Agent",
       stars: 5
     },
     {
-      quote: "De leadkwaliteit van Call2Day is indrukwekkend. We krijgen warme leads aangeleverd die al grotendeels gekwalificeerd zijn. Onze conversie is verdubbeld in 3 maanden.",
-      name: "Thomas van den Berg",
-      company: "Kade12 Marketing",
+      quote: "Wat ik fijn vind, is dat je hier echt kunt groeien. Je krijgt feedback, leert beter communiceren en merkt dat je elke week sterker wordt in sales.",
+      name: "Sofia de Jong",
+      company: "Verkoper",
       stars: 5
     },
     {
-      quote: "Snelle onboarding, geen gedoe. Binnen een week waren ze al live voor ons. Vaste contactpersoon, dagelijkse updates, en altijd bereikbaar. Precies wat we nodig hadden.",
-      name: "Sandra Jansen",
-      company: "Stadshaven Logistics",
+      quote: "De sfeer is professioneel, maar ook persoonlijk. Er is altijd iemand bereikbaar voor vragen en successen worden echt samen gevierd.",
+      name: "Milan Bakker",
+      company: "Callcenter Medewerker",
       stars: 5
     }];
 
@@ -886,7 +889,7 @@ const Contact = () => {
               {[
                 { label: "Telefoon", value: "+31 20 123 45 67", href: "tel:+31201234567" },
                 { label: "E-mail", value: "info@call2day.be", href: "mailto:info@call2day.be" },
-                { label: "Adres", value: "Keizersgracht 123, Amsterdam", href: null }].
+                { label: "Adres", value: "Meirbrug 1, 2000 Antwerpen", href: null }].
                 map((info, i) =>
                   <div key={i} className="flex items-center gap-4">
                     <span className="label-upper text-xs w-24 flex-shrink-0" style={{ color: "#C8F135" }}>{info.label}</span>
@@ -1005,10 +1008,10 @@ const Footer = () => {
                   AAN!
                 </h2>
                 <p className="text-base leading-relaxed mb-4 relative z-10" style={{ color: "#F5F0E8", opacity: 0.8 }}>
-                  Zie jij jezelf al sleke knaken verdienen en ga jij je dromen verwezenlijken? En ben je benieuwd naar al die leuke extra's?
+                  Klaar voor een job waar je goed verdient én kunt doorgroeien? Ontdek alle voordelen van werken bij Call2Day en maak deel uit van een enthousiast team.
                 </p>
                 <p className="text-base font-bold relative z-10" style={{ color: "#C8F135" }}>
-                  Meld je nu aan voor een kennismakingsgesprek!
+                  Solliciteer vandaag nog en plan een kennismakingsgesprek!
                 </p>
               </Reveal>
             </div>
@@ -1060,8 +1063,8 @@ const Footer = () => {
           <div>
             <div className="label-upper text-xs mb-4" style={{ color: "#C8F135" }}>Contact</div>
             <address className="flex flex-col gap-2 text-sm not-italic" style={{ color: "#F5F0E8", opacity: 0.7 }}>
-              <span>Keizersgracht 123</span>
-              <span>1015 CJ Amsterdam</span>
+              <span>Meirbrug 1</span>
+              <span>2000 Antwerpen</span>
               <a href="tel:+31201234567" className="mt-2 hover:opacity-100 transition-opacity" style={{ color: "#F5F0E8" }}>+31 20 123 45 67</a>
               <a href="mailto:info@call2day.be" className="hover:opacity-100 transition-opacity" style={{ color: "#F5F0E8" }}>info@call2day.be</a>
             </address>
