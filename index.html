@@ -1,0 +1,25 @@
+const db = globalThis.__B44_DB__ || { auth:{ isAuthenticated: async()=>false, me: async()=>null }, entities:new Proxy({}, { get:()=>({ filter:async()=>[], get:async()=>null, create:async()=>({}), update:async()=>({}), delete:async()=>({}) }) }), integrations:{ Core:{ UploadFile:async()=>({ file_url:'' }) } } };
+
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="apple-touch-icon" sizes="180x180" href="https://media.db.com/images/public/6a3344ab7a0ad167deffbaea/0d64f004d_call2day-logo-v1-symbol.png" />
+    <link rel="icon" type="image/png" href="https://media.db.com/images/public/6a3344ab7a0ad167deffbaea/0d64f004d_call2day-logo-v1-symbol.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Call2Day — Telemarketing Partner in Nederland</title>
+    <meta name="description" content="Call2Day is jouw professionele telemarketing partner in Nederland. Telesales, klantenservice en leadgeneratie door ervaren Nederlandstalige agents." />
+    <meta name="keywords" content="telemarketing nederland, callcenter nederland, telesales, leadgeneratie, klantenservice uitbesteden, call2day" />
+    <meta property="og:title" content="Call2Day — Elke beller een échte stem." />
+    <meta property="og:description" content="Professionele telemarketing diensten in Nederland. 200+ klanten geholpen, 98% bereikbaarheid, 4,8/5 tevredenheid." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://call2day.be" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
