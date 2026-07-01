@@ -7,14 +7,14 @@ import { submitForm } from "@/lib/submitForm";
 const LOGO_URL = "/call2day-logo-v1.png";
 const SYMBOL_URL = "/call2day-logo-v1-symbol.png";
 
-// ─── NETHERLANDS CITIES ───────────────────────────────────────────────────────
+// ─── FLEMISH CITIES ───────────────────────────────────────────────────────────
 const NL_CITIES = [
-  "Amsterdam", "Rotterdam", "Den Haag", "Utrecht", "Eindhoven",
-  "Groningen", "Tilburg", "Almere", "Breda", "Nijmegen",
-  "Enschede", "Haarlem", "Arnhem", "Zaanstad", "Amersfoort",
-  "Apeldoorn", "s-Hertogenbosch", "Hoofddorp", "Maastricht", "Leiden",
-  "Dordrecht", "Zoetermeer", "Zwolle", "Deventer", "Delft",
-  "Alkmaar", "Venlo", "Leeuwarden", "Hilversum", "Middelburg"];
+  "Antwerpen", "Gent", "Brugge", "Leuven", "Mechelen",
+  "Aalst", "Sint-Niklaas", "Hasselt", "Kortrijk", "Genk",
+  "Oostende", "Turnhout", "Roeselare", "Dendermonde", "Beveren",
+  "Lokeren", "Beringen", "Herk-de-Stad", "Ronse", "Ieper",
+  "Vilvoorde", "Harelbeke", "Lommel", "Herentals", "Waregem",
+  "Aarschot", "Bilzen", "Diest", "Tielt", "Tongeren"];
 
 // ─── SCROLL REVEAL WRAPPER ───────────────────────────────────────────────────
 const Reveal = ({ children, delay = 0, className = "" }) => {
@@ -551,13 +551,13 @@ const Hero = () => {
 const TickerBar = () => {
   const items = [
     "200+ AGENTS ACTIEF",
-    "WERK IN HEEL NEDERLAND",
+    "WERK IN HEEL VLAANDEREN",
     "4,8/5 WERKNEMERSTEVREDENHEID",
     "10+ JAAR ERVARING",
     "ROYALE BONUSSTRUCTUUR",
     "NL · FR · EN MEERTALIG TEAM",
     "200+ AGENTS ACTIEF",
-    "WERK IN HEEL NEDERLAND",
+    "WERK IN HEEL VLAANDEREN",
     "4,8/5 WERKNEMERSTEVREDENHEID",
     "10+ JAAR ERVARING",
     "ROYALE BONUSSTRUCTUUR",
@@ -667,7 +667,7 @@ const About = () => {
                 className="absolute bottom-0 left-0 right-0 px-6 py-4"
                 style={{ backgroundColor: "rgba(13,13,13,0.85)", borderTop: "3px solid #C8F135" }}>
 
-                <span className="label-upper text-xs" style={{ color: "#C8F135" }}>Call2Day Team · Nederland</span>
+                <span className="label-upper text-xs" style={{ color: "#C8F135" }}>Call2Day Team · Vlaanderen</span>
               </div>
               <div
                 className="absolute top-6 left-6 belpro-border px-4 py-3"
@@ -1033,7 +1033,7 @@ const Footer = () => {
               style={{ height: 44, objectFit: "contain", filter: "brightness(0) invert(1)", marginBottom: 16 }} />
 
             <p className="text-sm leading-relaxed" style={{ color: "#F5F0E8", opacity: 0.55 }}>
-              Jouw telemarketing partner in Nederland. Professioneel, snel, en altijd met een echte stem.
+              Jouw telemarketing partner in Vlaanderen. Professioneel, snel, en altijd met een echte stem.
             </p>
           </div>
 
