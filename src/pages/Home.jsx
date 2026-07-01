@@ -494,7 +494,7 @@ const Hero = () => {
             {/* Subtext */}
             <Reveal delay={0.1}>
               <p className="text-lg mb-6 max-w-md leading-relaxed" style={{ color: "#0D0D0D", opacity: 0.8 }}>
-                Heb jij de work hard – play hard mentaliteit? Wil jij je op salesgebied verder ontwikkelen? En wil je serieuze knaken verdienen? Dan is Call2Day jouw organisatie!
+                Heb jij een echte work hard, play hard-mentaliteit? Wil jij jezelf verder ontwikkelen in sales? En wil je daar ook mooi voor beloond worden? Dan is Call2Day de plek voor jou!
               </p>
             </Reveal>
 
@@ -518,9 +518,9 @@ const Hero = () => {
             {/* Social proof */}
             <Reveal delay={0.2}>
               <div className="flex flex-wrap gap-5 text-sm font-bold" style={{ color: "#0D0D0D" }}>
-                <span><strong>200+</strong> agents actief</span>
+                <span><strong>50+</strong> agents actief</span>
                 <span style={{ opacity: 0.25 }}>·</span>
-                <span><strong>NL · FR · EN</strong> meertalig</span>
+                <span><strong>NL · EN</strong> meertalig</span>
                 <span style={{ opacity: 0.25 }}>·</span>
                 <span><strong>4,8/5</strong> tevredenheid</span>
               </div>
@@ -735,9 +735,9 @@ const Clients = () => {
       <div className="max-w-7xl mx-auto">
         <Reveal>
           <div className="text-center mb-16">
-            <span className="label-upper text-xs mb-3 block" style={{ color: "#0D0D0D", opacity: 0.5 }}>Onze klanten</span>
+            {/* <span className="label-upper text-xs mb-3 block" style={{ color: "#0D0D0D", opacity: 0.5 }}>Onze klanten</span> */}
             <h2 className="heading-black text-5xl md:text-6xl" style={{ color: "#0D0D0D" }}>
-              Vertrouwd <span className="highlight-green">door</span>
+              Vertrouwd <span className="highlight-green">in</span>
             </h2>
           </div>
         </Reveal>
@@ -798,7 +798,7 @@ const Testimonials = () => {
           <div className="mb-16">
             <span className="label-upper text-xs mb-3 block" style={{ color: "#0D0D0D", opacity: 0.5 }}>Referenties</span>
             <h2 className="heading-black text-5xl md:text-6xl" style={{ color: "#0D0D0D" }}>
-              Wat onze klanten <span className="highlight-green">zeggen</span>
+              Wat onze collega’s <span className="highlight-green">zeggen</span>
             </h2>
           </div>
         </Reveal>
