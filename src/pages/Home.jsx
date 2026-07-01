@@ -648,7 +648,8 @@ const Services = () => {
 // ─── ABOUT ────────────────────────────────────────────────────────────────────
 const About = () => {
   return (
-    <section id="over-ons" className="py-24 px-6" style={{ backgroundColor: "var(--belpro-navy)", backgroundImage: "url('/design/wmremove-transformed.png')", backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat" }}>
+    // <section id="over-ons" className="py-24 px-6" style={{ backgroundColor: "var(--belpro-navy)", backgroundImage: "url('/design/wmremove-transformed.png')", backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat" }}>
+    <section id="over-ons" className="py-24 px-6" style={{ backgroundColor: "var(--belpro-navy)", backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat" }}>
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
