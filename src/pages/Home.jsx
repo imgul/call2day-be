@@ -4,8 +4,8 @@ import { Phone, Headphones, Target, Star, ArrowRight, Menu, X, CheckCircle, Chev
 import { submitForm } from "@/lib/submitForm";
 
 // ─── LOGO URLS ────────────────────────────────────────────────────────────────
-const LOGO_URL = "https://media.db.com/images/public/6a3344ab7a0ad167deffbaea/815ac232b_call2day-logo-v1.png";
-const SYMBOL_URL = "https://media.db.com/images/public/6a3344ab7a0ad167deffbaea/0d64f004d_call2day-logo-v1-symbol.png";
+const LOGO_URL = "/call2day-logo-v1.png";
+const SYMBOL_URL = "/call2day-logo-v1-symbol.png";
 
 // ─── NETHERLANDS CITIES ───────────────────────────────────────────────────────
 const NL_CITIES = [
@@ -132,7 +132,7 @@ const AgentSignupForm = ({ onDark = false }) => {
       onSubmit={handleSubmit}
       noValidate
       style={{
-        backgroundColor: "#1A1F2E",
+        backgroundColor: "var(--belpro-navy)",
         border: "3px solid #0D0D0D",
         boxShadow: "6px 6px 0px #C8F135",
         padding: "28px 24px",
@@ -145,10 +145,8 @@ const AgentSignupForm = ({ onDark = false }) => {
       <div>
         <div className="flex justify-between items-center mb-2">
           <label className="label-upper text-xs" style={{ color: "#C8F135" }}>Jaren ervaring</label>
-          <div className="flex gap-2 text-xs font-bold" style={{ color: "#F5F0E8" }}>
-            <span style={{ color: "#F5F0E8", opacity: 0.4 }}>0</span>
-            <span style={{ color: "#C8F135", fontSize: "1rem", lineHeight: 1 }}>{form.ervaring}</span>
-            <span style={{ color: "#F5F0E8", opacity: 0.4 }}>10+</span>
+          <div className="text-xs font-bold" style={{ color: "#C8F135", fontSize: "1rem", lineHeight: 1 }}>
+            {form.ervaring}
           </div>
         </div>
         <div className="relative" style={{ height: 24, display: "flex", alignItems: "center" }}>
@@ -369,7 +367,7 @@ const Navbar = () => {
       <nav
         className="fixed top-0 left-0 right-0 z-50 transition-all duration-200"
         style={{
-          backgroundColor: "#1A1F2E",
+          backgroundColor: "var(--belpro-navy)",
           borderBottom: scrolled ? "3px solid #C8F135" : "3px solid transparent"
         }}>
         
@@ -424,7 +422,7 @@ const Navbar = () => {
         {menuOpen &&
         <div
           className="md:hidden border-t-2 px-6 py-6 flex flex-col gap-4"
-          style={{ backgroundColor: "#1A1F2E", borderColor: "#C8F135" }}>
+          style={{ backgroundColor: "var(--belpro-navy)", borderColor: "#C8F135" }}>
           
             {navLinks.map((link) =>
           <a
@@ -503,7 +501,7 @@ const Hero = () => {
                 "Persoonlijke coaching"].
                 map((perk, i) =>
                 <div key={i} className="flex items-center gap-2">
-                    <CheckCircle size={15} style={{ color: "#1A1F2E", flexShrink: 0 }} />
+                    <CheckCircle size={15} style={{ color: "var(--belpro-navy)", flexShrink: 0 }} />
                     <span className="text-sm font-semibold" style={{ color: "#0D0D0D" }}>{perk}</span>
                   </div>
                 )}
@@ -528,7 +526,7 @@ const Hero = () => {
               {/* Form header */}
               <div
                 className="px-6 py-5"
-                style={{ backgroundColor: "#1A1F2E", border: "3px solid #0D0D0D", borderBottom: "none" }}>
+                style={{ backgroundColor: "var(--belpro-navy)", border: "3px solid #0D0D0D", borderBottom: "none" }}>
                 
                 <div className="heading-black text-2xl mb-1" style={{ color: "#C8F135" }}>METEEN AANMELDEN!</div>
                 <div className="text-sm font-bold" style={{ color: "#F5F0E8" }}>Pak je uitdagingen met beide handen aan!</div>
@@ -643,7 +641,7 @@ const Services = () => {
 // ─── ABOUT ────────────────────────────────────────────────────────────────────
 const About = () => {
   return (
-    <section id="over-ons" className="py-24 px-6" style={{ backgroundColor: "#1A1F2E" }}>
+    <section id="over-ons" className="py-24 px-6" style={{ backgroundColor: "var(--belpro-navy)" }}>
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
@@ -652,7 +650,7 @@ const About = () => {
               className="belpro-border relative overflow-hidden"
               style={{ minHeight: "420px", backgroundColor: "#0D0D0D", boxShadow: "8px 8px 0px #C8F135" }}>
               
-              <img src="https://media.db.com/images/public/6a3344ab7a0ad167deffbaea/630221e6a_10_jaar_plus_jaar_sector_picture.png"
+              <img src="/images/10_jaar_plus_jaar_sector_picture.png"
 
               alt="Call2Day team"
               className="w-full h-full object-cover absolute inset-0"
@@ -864,7 +862,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-24 px-6" style={{ backgroundColor: "#1A1F2E", borderTop: "3px solid #C8F135" }}>
+    <section id="contact" className="py-24 px-6" style={{ backgroundColor: "var(--belpro-navy)", borderTop: "3px solid #C8F135" }}>
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           <Reveal>
@@ -976,10 +974,10 @@ const Footer = () => {
   { label: "Contact", href: "#contact" }];
 
   return (
-    <footer style={{ backgroundColor: "#0D0D0D", borderTop: "3px solid #1A1F2E" }}>
+    <footer style={{ backgroundColor: "#0D0D0D", borderTop: "3px solid var(--belpro-navy)" }}>
 
       {/* ── FOOTER SIGNUP SECTION ── */}
-      <div style={{ backgroundColor: "#1A1F2E", borderBottom: "3px solid #C8F135" }}>
+      <div style={{ backgroundColor: "var(--belpro-navy)", borderBottom: "3px solid #C8F135" }}>
         <div className="max-w-7xl mx-auto px-6 py-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
 
