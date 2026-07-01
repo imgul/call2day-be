@@ -364,7 +364,9 @@ const Navbar = () => {
   return (
     <>
       <div id="progress-bar" />
+      <header>
       <nav
+        aria-label="Hoofdnavigatie"
         className="fixed top-0 left-0 right-0 z-50 transition-all duration-200"
         style={{
           backgroundColor: "var(--belpro-navy)",
@@ -412,15 +414,19 @@ const Navbar = () => {
           <button
             className="md:hidden p-2"
             onClick={() => setMenuOpen(!menuOpen)}
+            aria-label={menuOpen ? "Menu sluiten" : "Menu openen"}
+            aria-expanded={menuOpen}
+            aria-controls="mobile-menu"
             style={{ color: "#F5F0E8" }}>
 
-            {menuOpen ? <X size={24} /> : <Menu size={24} />}
+            {menuOpen ? <X size={24} aria-hidden="true" /> : <Menu size={24} aria-hidden="true" />}
           </button>
         </div>
 
         {/* Mobile menu */}
         {menuOpen &&
           <div
+            id="mobile-menu"
             className="md:hidden border-t-2 px-6 py-6 flex flex-col gap-4"
             style={{ backgroundColor: "var(--belpro-navy)", borderColor: "#C8F135" }}>
 
@@ -446,6 +452,7 @@ const Navbar = () => {
           </div>
         }
       </nav>
+      </header>
     </>);
 
 };
@@ -557,12 +564,12 @@ const TickerBar = () => {
     "NL · FR · EN MEERTALIG TEAM"];
 
   return (
-    <section id="stats" style={{ backgroundColor: "#C8F135", borderTop: "3px solid #0D0D0D", borderBottom: "3px solid #0D0D0D", overflow: "hidden" }}>
-      <div className="ticker-track py-4">
+    <section id="stats" aria-label="Kernpunten" style={{ backgroundColor: "#C8F135", borderTop: "3px solid #0D0D0D", borderBottom: "3px solid #0D0D0D", overflow: "hidden" }}>
+      <div className="ticker-track py-4" aria-hidden="true">
         {items.map((item, i) =>
           <span key={i} className="flex items-center gap-6 mx-6">
             <span className="label-upper text-sm" style={{ color: "#0D0D0D", whiteSpace: "nowrap" }}>{item}</span>
-            <span style={{ color: "#0D0D0D", opacity: 0.4, fontSize: "1.25rem" }}>◆</span>
+            <span aria-hidden="true" style={{ color: "#0D0D0D", opacity: 0.4, fontSize: "1.25rem" }}>◆</span>
           </span>
         )}
       </div>
@@ -610,16 +617,16 @@ const Services = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {services.map((s, i) =>
             <Reveal key={i} delay={i * 0.08}>
-              <div className="card-brutal p-8 flex flex-col h-full">
+              <article className="card-brutal p-8 flex flex-col h-full" aria-label={s.title}>
                 <div className="flex items-start justify-between mb-6">
-                  <span className="heading-black text-5xl" style={{ color: "#C8F135", WebkitTextStroke: "2px #0D0D0D" }}>
+                  <span aria-hidden="true" className="heading-black text-5xl" style={{ color: "#C8F135", WebkitTextStroke: "2px #0D0D0D" }}>
                     {s.num}
                   </span>
                   <span className="label-upper text-xs px-3 py-1 belpro-border" style={{ color: "#0D0D0D", backgroundColor: "#C8F135" }}>
                     {s.tag}
                   </span>
                 </div>
-                <div className="mb-4" style={{ color: "#0D0D0D" }}>{s.icon}</div>
+                <div aria-hidden="true" className="mb-4" style={{ color: "#0D0D0D" }}>{s.icon}</div>
                 <h3 className="heading-black text-3xl mb-3" style={{ color: "#0D0D0D" }}>{s.title}</h3>
                 <p className="text-base leading-relaxed mb-6" style={{ color: "#0D0D0D", opacity: 0.75, flex: 1 }}>{s.desc}</p>
                 <a
@@ -627,9 +634,9 @@ const Services = () => {
                   className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wider"
                   style={{ color: "#0D0D0D", borderBottom: "2px solid #0D0D0D", paddingBottom: "2px", width: "fit-content" }}>
 
-                  Meer info <ArrowRight size={14} />
+                  Meer info <ArrowRight size={14} aria-hidden="true" />
                 </a>
-              </div>
+              </article>
             </Reveal>
           )}
         </div>
@@ -796,26 +803,27 @@ const Testimonials = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {testimonials.map((t, i) =>
             <Reveal key={i} delay={i * 0.08}>
-              <div className="card-brutal p-8 relative overflow-hidden flex flex-col h-full">
+              <article className="card-brutal p-8 relative overflow-hidden flex flex-col h-full" aria-label={`Review van ${t.name}, ${t.company}`}>
                 <div
+                  aria-hidden="true"
                   className="absolute top-2 left-4 heading-black select-none pointer-events-none"
                   style={{ fontSize: "120px", color: "#0D0D0D", opacity: 0.06, lineHeight: 1 }}>
 
                   "
                 </div>
-                <div className="flex gap-1 mb-5">
+                <div className="flex gap-1 mb-5" aria-label={`${t.stars} van 5 sterren`} role="img">
                   {Array.from({ length: t.stars }).map((_, si) =>
-                    <Star key={si} size={16} fill="#C8F135" style={{ color: "#C8F135" }} />
+                    <Star key={si} size={16} fill="#C8F135" style={{ color: "#C8F135" }} aria-hidden="true" />
                   )}
                 </div>
                 <p className="text-base leading-relaxed mb-6 flex-1 relative z-10" style={{ color: "#0D0D0D", opacity: 0.85 }}>
                   "{t.quote}"
                 </p>
-                <div className="pt-4" style={{ borderTop: "2px solid #0D0D0D" }}>
+                <footer className="pt-4" style={{ borderTop: "2px solid #0D0D0D" }}>
                   <div className="font-black text-base" style={{ color: "#0D0D0D" }}>{t.name}</div>
                   <div className="text-sm font-semibold" style={{ color: "#0D0D0D", opacity: 0.5 }}>{t.company}</div>
-                </div>
-              </div>
+                </footer>
+              </article>
             </Reveal>
           )}
         </div>
@@ -874,18 +882,20 @@ const Contact = () => {
             <p className="text-base mb-10 leading-relaxed" style={{ color: "#F5F0E8", opacity: 0.7 }}>
               Vul het formulier in en we nemen binnen 24 uur contact met je op. Geen verplichtingen, geen kleine lettertjes — gewoon een eerlijk gesprek.
             </p>
-            <div className="flex flex-col gap-4">
+            <address className="flex flex-col gap-4 not-italic">
               {[
-                { label: "Telefoon", value: "+31 20 123 45 67" },
-                { label: "E-mail", value: "info@call2day.be" },
-                { label: "Adres", value: "Keizersgracht 123, Amsterdam" }].
+                { label: "Telefoon", value: "+31 20 123 45 67", href: "tel:+31201234567" },
+                { label: "E-mail", value: "info@call2day.be", href: "mailto:info@call2day.be" },
+                { label: "Adres", value: "Keizersgracht 123, Amsterdam", href: null }].
                 map((info, i) =>
                   <div key={i} className="flex items-center gap-4">
                     <span className="label-upper text-xs w-24 flex-shrink-0" style={{ color: "#C8F135" }}>{info.label}</span>
-                    <span className="text-base" style={{ color: "#F5F0E8", opacity: 0.85 }}>{info.value}</span>
+                    {info.href
+                      ? <a href={info.href} className="text-base hover:opacity-100 transition-opacity" style={{ color: "#F5F0E8", opacity: 0.85 }}>{info.value}</a>
+                      : <span className="text-base" style={{ color: "#F5F0E8", opacity: 0.85 }}>{info.value}</span>}
                   </div>
                 )}
-            </div>
+            </address>
           </Reveal>
 
           <Reveal delay={0.1}>
@@ -1049,12 +1059,12 @@ const Footer = () => {
           {/* Col 3 — Contact */}
           <div>
             <div className="label-upper text-xs mb-4" style={{ color: "#C8F135" }}>Contact</div>
-            <div className="flex flex-col gap-2 text-sm" style={{ color: "#F5F0E8", opacity: 0.7 }}>
+            <address className="flex flex-col gap-2 text-sm not-italic" style={{ color: "#F5F0E8", opacity: 0.7 }}>
               <span>Keizersgracht 123</span>
               <span>1015 CJ Amsterdam</span>
-              <span className="mt-2">+31 20 123 45 67</span>
-              <span>info@call2day.be</span>
-            </div>
+              <a href="tel:+31201234567" className="mt-2 hover:opacity-100 transition-opacity" style={{ color: "#F5F0E8" }}>+31 20 123 45 67</a>
+              <a href="mailto:info@call2day.be" className="hover:opacity-100 transition-opacity" style={{ color: "#F5F0E8" }}>info@call2day.be</a>
+            </address>
           </div>
         </div>
 
