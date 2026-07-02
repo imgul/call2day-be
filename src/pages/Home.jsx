@@ -357,7 +357,7 @@ const Navbar = () => {
   const navLinks = [
     { label: "Diensten", href: "#diensten" },
     { label: "Over ons", href: "#over-ons" },
-    { label: "Klanten", href: "#klanten" },
+    { label: "Werkgebieden", href: "#klanten" },
     { label: "Vacatures", href: "#aanmelden" },
     { label: "Contact", href: "#contact" }];
 
@@ -983,7 +983,7 @@ const Footer = () => {
   const quickLinks = [
     { label: "Diensten", href: "#diensten" },
     { label: "Over ons", href: "#over-ons" },
-    { label: "Klanten", href: "#klanten" },
+    { label: "Werkgebieden", href: "#klanten" },
     { label: "Vacatures", href: "#aanmelden" },
     { label: "Contact", href: "#contact" }];
 
