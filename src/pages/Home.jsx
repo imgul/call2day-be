@@ -462,18 +462,41 @@ const Hero = () => {
   return (
     <section
       id="aanmelden"
-      className="min-h-screen flex flex-col justify-center pt-28 pb-16 px-6"
-      style={{ backgroundColor: "#F5F0E8" }}>
+      className="relative min-h-screen flex flex-col justify-center pt-28 pb-16 px-6 overflow-hidden"
+      style={{
+        backgroundImage: "url('/images/hero-background.jpg')",
+        backgroundSize: "cover",
+        backgroundPosition: "center 35%",
+      }}>
 
-      <div className="max-w-7xl mx-auto w-full">
+      {/* ── Overlay layer 1: left-anchored navy gradient (desktop) ── */}
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            "linear-gradient(105deg, rgba(26,31,46,0.97) 0%, rgba(26,31,46,0.92) 30%, rgba(26,31,46,0.68) 58%, rgba(26,31,46,0.20) 100%)",
+        }}
+      />
+      {/* ── Overlay layer 2: extra veil on mobile so single-col text stays readable ── */}
+      <div
+        className="absolute inset-0 lg:hidden"
+        style={{ background: "rgba(26,31,46,0.42)" }}
+      />
+
+      <div className="max-w-7xl mx-auto w-full relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
 
           {/* LEFT — copy */}
           <div className="pt-4">
+
             {/* Badge */}
             <Reveal>
-              <div className="inline-flex items-center gap-2 px-4 py-2 mb-8 belpro-border belpro-shadow"
-                style={{ backgroundColor: "#C8F135" }}>
+              <div
+                className="inline-flex items-center gap-2 px-4 py-2 mb-8 belpro-border"
+                style={{
+                  backgroundColor: "#C8F135",
+                  boxShadow: "4px 4px 0px rgba(200,241,53,0.35)",
+                }}>
                 <span className="pulse-dot w-2.5 h-2.5 rounded-full" style={{ backgroundColor: "#0D0D0D" }} />
                 <span className="label-upper text-xs" style={{ color: "#0D0D0D" }}>Werken bij Call2Day</span>
               </div>
@@ -481,20 +504,25 @@ const Hero = () => {
 
             {/* Headline */}
             <Reveal delay={0.05}>
-              <h1 className="heading-black text-5xl sm:text-6xl xl:text-7xl mb-6 leading-none" style={{ color: "#0D0D0D" }}>
+              <h1
+                className="heading-black text-5xl sm:text-6xl xl:text-7xl mb-6 leading-none"
+                style={{ color: "#F5F0E8" }}>
                 Elke beller een{" "}
                 <span className="inline-block mt-2">
                   <span className="highlight-green belpro-border inline-block mr-2">échte</span>
                   <span className="highlight-green belpro-border inline-block">stem</span>
-                  <span>.</span>
+                  <span style={{ color: "#F5F0E8" }}>.</span>
                 </span>
               </h1>
             </Reveal>
 
             {/* Subtext */}
             <Reveal delay={0.1}>
-              <p className="text-lg mb-6 max-w-md leading-relaxed" style={{ color: "#0D0D0D", opacity: 0.8 }}>
-                Heb jij een echte work hard, play hard-mentaliteit? Wil jij jezelf verder ontwikkelen in sales? En wil je daar ook mooi voor beloond worden? Dan is Call2Day de plek voor jou!
+              <p
+                className="text-lg mb-6 max-w-md leading-relaxed"
+                style={{ color: "#F5F0E8", opacity: 0.82 }}>
+                Heb jij een echte work hard, play hard-mentaliteit? Wil jij jezelf verder ontwikkelen
+                in sales? En wil je daar ook mooi voor beloond worden? Dan is Call2Day de plek voor jou!
               </p>
             </Reveal>
 
@@ -505,24 +533,24 @@ const Hero = () => {
                   "Aantrekkelijk salaris",
                   "Royale bonusstructuur",
                   "Super toffe extra's",
-                  "Persoonlijke coaching"].
-                  map((perk, i) =>
-                    <div key={i} className="flex items-center gap-2">
-                      <CheckCircle size={15} style={{ color: "var(--belpro-navy)", flexShrink: 0 }} />
-                      <span className="text-sm font-semibold" style={{ color: "#0D0D0D" }}>{perk}</span>
-                    </div>
-                  )}
+                  "Persoonlijke coaching",
+                ].map((perk, i) => (
+                  <div key={i} className="flex items-center gap-2">
+                    <CheckCircle size={15} style={{ color: "#C8F135", flexShrink: 0 }} />
+                    <span className="text-sm font-semibold" style={{ color: "#F5F0E8" }}>{perk}</span>
+                  </div>
+                ))}
               </div>
             </Reveal>
 
             {/* Social proof */}
             <Reveal delay={0.2}>
-              <div className="flex flex-wrap gap-5 text-sm font-bold" style={{ color: "#0D0D0D" }}>
-                <span><strong>50+</strong> agents actief</span>
-                <span style={{ opacity: 0.25 }}>·</span>
-                <span><strong>NL · EN</strong> meertalig</span>
-                <span style={{ opacity: 0.25 }}>·</span>
-                <span><strong>4,8/5</strong> tevredenheid</span>
+              <div className="flex flex-wrap gap-5 text-sm font-bold" style={{ color: "#F5F0E8" }}>
+                <span><strong style={{ color: "#C8F135" }}>50+</strong> agents actief</span>
+                <span style={{ opacity: 0.3 }}>·</span>
+                <span><strong style={{ color: "#C8F135" }}>NL · EN</strong> meertalig</span>
+                <span style={{ opacity: 0.3 }}>·</span>
+                <span><strong style={{ color: "#C8F135" }}>4,8/5</strong> tevredenheid</span>
               </div>
             </Reveal>
           </div>
@@ -533,18 +561,26 @@ const Hero = () => {
               {/* Form header */}
               <div
                 className="px-6 py-5"
-                style={{ backgroundColor: "var(--belpro-navy)", border: "3px solid #0D0D0D", borderBottom: "none" }}>
-
-                <div className="heading-black text-2xl mb-1" style={{ color: "#C8F135" }}>METEEN AANMELDEN!</div>
-                <div className="text-sm font-bold" style={{ color: "#F5F0E8" }}>Pak je uitdagingen met beide handen aan!</div>
+                style={{
+                  backgroundColor: "var(--belpro-navy)",
+                  border: "3px solid #0D0D0D",
+                  borderBottom: "none",
+                }}>
+                <div className="heading-black text-2xl mb-1" style={{ color: "#C8F135" }}>
+                  METEEN AANMELDEN!
+                </div>
+                <div className="text-sm font-bold" style={{ color: "#F5F0E8" }}>
+                  Pak je uitdagingen met beide handen aan!
+                </div>
               </div>
               <AgentSignupForm />
             </div>
           </Reveal>
+
         </div>
       </div>
-    </section>);
-
+    </section>
+  );
 };
 
 // ─── TICKER BAR ───────────────────────────────────────────────────────────────
