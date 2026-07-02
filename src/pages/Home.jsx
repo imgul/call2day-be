@@ -509,8 +509,8 @@ const Hero = () => {
                 style={{ color: "#F5F0E8" }}>
                 Elke beller een{" "}
                 <span className="inline-block mt-2">
-                  <span className="highlight-green belpro-border inline-block mr-2">échte</span>
-                  <span className="highlight-green belpro-border inline-block">stem</span>
+                  <span className="highlight-green belpro-border inline-block mr-2" style={{ color: "#0D0D0D" }}>échte</span>
+                  <span className="highlight-green belpro-border inline-block" style={{ color: "#0D0D0D" }}>stem</span>
                   <span style={{ color: "#F5F0E8" }}>.</span>
                 </span>
               </h1>
